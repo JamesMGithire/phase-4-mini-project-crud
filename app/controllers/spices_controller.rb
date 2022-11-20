@@ -1,5 +1,5 @@
 class SpicesController < ApplicationController
-    # rescue_from ActiveRecord::RecordNotFound, with: :not_found_error_method
+    rescue_from ActiveRecord::RecordNotFound, with: :not_found_error_method
     def index
         render json: Spice.all
     end
